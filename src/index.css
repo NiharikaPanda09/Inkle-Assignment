@@ -1,0 +1,60 @@
+:root{
+  --bg:#f5f6f8;
+  --card:#ffffff;
+  --accent:#6c2bd9;
+  --muted:#9aa0a6;
+  --pill-male:#ffdede;
+  --pill-female:#f0f7ff;
+}
+*{box-sizing:border-box;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+body{margin:0;background:linear-gradient(180deg,#efefef, #f7f7f9);min-height:100vh}
+.container{max-width:980px;margin:40px auto;padding:20px}
+.card{background:var(--card);border-radius:8px;padding:18px;box-shadow:0 6px 20px rgba(11,15,26,0.08)}
+.table{width:100%;border-collapse:collapse}
+.table th{font-size:12px;text-align:left;color:var(--muted);padding:12px 8px}
+.table td{padding:14px 8px;border-top:1px solid #f2f2f4;vertical-align:middle}
+.entity{display:flex;align-items:center;gap:12px}
+.nameLink{color:var(--accent);font-weight:600;text-decoration:none}
+.pill{padding:6px 10px;border-radius:999px;font-size:12px}
+.pill.male{background:#ffecec;color:#c93d3d}
+.pill.female{background:#f3f7ff;color:#5a79d1}
+.actions{display:flex;justify-content:flex-end}
+.editBtn{background:transparent;border:0;color:#6b6b6b;cursor:pointer}
+
+/* Modal */
+.modalBackdrop{position:fixed;inset:0;background:rgba(20,20,20,0.5);display:flex;align-items:center;justify-content:center}
+.modal{width:520px;background:var(--card);border-radius:8px;padding:20px}
+.modal h3{margin:0 0 12px}
+.formRow{margin:12px 0}
+.input, .select{width:100%;padding:10px;border:1px solid #e6e6ee;border-radius:6px}
+.modalFooter{display:flex;justify-content:flex-end;gap:12px;margin-top:16px}
+.btn{padding:8px 14px;border-radius:6px;border:0;cursor:pointer}
+.btn.ghost{background:#f5f5f7}
+.btn.primary{background:var(--accent);color:white}
+
+/* Country filter popup and funnel */
+.countryHeader{position:relative;display:inline-flex;align-items:center;gap:6px}
+.filterIconBtn{background:transparent;border:0;padding:6px;border-radius:6px;cursor:pointer;display:inline-flex;align-items:center;color:#6b6b6b}
+.filterIconBtn:focus{outline:2px solid rgba(108,43,217,0.12)}
+.filterIconBtn.active{color:var(--accent)}
+.countryFilterPopup{position:absolute;top:calc(100% + 8px);right:0;background:var(--card);border:2px solid #dfe6ff;border-radius:6px;padding:10px 12px;box-shadow:0 10px 30px rgba(11,15,26,0.08);min-width:150px;z-index:30}
+.countryFilterPopup label.countryOption{display:flex;align-items:center;gap:10px;padding:8px 6px;cursor:pointer}
+.countryFilterPopup input[type="checkbox"]{width:16px;height:16px}
+
+/* Custom select used in EditModal */
+.selectCustom{position:relative}
+.selectBox{width:100%;padding:10px;border:1px solid #e6e6ee;border-radius:6px;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+.selectBox .label{color:#333}
+.selectBox .caret{color:#6b6b6b}
+.countryList{position:absolute;top:calc(100% + 8px);left:0;right:0;background:var(--card);border:1px solid #ececf2;border-radius:6px;padding:8px;z-index:40;box-shadow:0 10px 30px rgba(11,15,26,0.06)}
+.countryItem{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:6px;cursor:pointer}
+.countryItem:hover{background:#fbf9ff}
+.countryLeft{display:flex;align-items:center;gap:10px}
+.pinIcon{width:18px;height:18px;color:#9aa0a6;display:inline-flex;align-items:center}
+.editIcon{width:18px;height:18px;color:var(--accent);display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+
+.countryEditInput{padding:6px 8px;border:1px solid #e6e6ee;border-radius:6px}
+.smallBtn{padding:6px 8px;border-radius:6px;border:1px solid #e6e6ee;background:white;cursor:pointer}
+
+
+
